@@ -1,5 +1,6 @@
 require "bundler"
 Bundler.require
+require "./lib/spacecat"
 
 set :database, "sqlite3:///spacecats.db" #had to look up syntax for connecting database
 
@@ -7,7 +8,8 @@ module Space
   class App < Sinatra::Application
 
     get "/index" do
-      #index
+      @spacecats = SpaceCat.all
+      haml :index
     end
 
     get "/new" do
