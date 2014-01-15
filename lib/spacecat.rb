@@ -1,0 +1,3 @@
+SpaceCat < ActiveRecord::Base
+
+end
