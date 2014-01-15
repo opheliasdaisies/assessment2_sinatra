@@ -1,3 +1,3 @@
-class SpaceCat < ActiveRecord::Base
+class Spacecat < ActiveRecord::Base
 
 end

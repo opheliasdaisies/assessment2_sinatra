@@ -8,21 +8,22 @@ module Space
   class App < Sinatra::Application
 
     get "/index" do
-      @spacecats = SpaceCat.all
+      @spacecats = Spacecat.all
+
       haml :index
     end
 
-    get "/new" do
-      #new
-    end
+    # get "/new" do
+    #   #new
+    # end
 
-    post "/index" do
-      #create
-    end
+    # post "/index" do
+    #   #create
+    # end
 
-    get "/:id/" do
-      #show
-    end
+    # get "/:id/" do
+    #   #show
+    # end
 
     # get "/:id/edit" do
     #   #edit
