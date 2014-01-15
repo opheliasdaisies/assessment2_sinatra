@@ -22,12 +22,15 @@ module Space
     post "/index" do
       @spacecat = Spacecat.new(params[:spacecat])
       @spacecat.save
-      redirect_to @spacecat
+
+      redirect "/#{@spacecat.id}"
     end
 
-    # get "/:id/" do
-    #   #show
-    # end
+    get "/:id" do
+      @spacecat = Spacecat.find(params[:id])
+
+      haml :show
+    end
 
     # get "/:id/edit" do
     #   #edit
