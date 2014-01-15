@@ -2,3 +2,13 @@ body {
   padding: 20px;
   background-color: burlywood;
 }
+
+.profile {
+  position: relative;
+}
+
+.profile img {
+  position: absolute;
+  right: 20%;
+  top: 20px;
+}
