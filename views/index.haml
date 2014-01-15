@@ -5,7 +5,8 @@
     %th Name
     %th
   - @spacecats.each do |cat|
-    %tr= cat.name
+    %tr
+      %td= cat.name
 %br
 %br
 %a{:href=>"/new"}New SpaceCat
