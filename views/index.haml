@@ -1,0 +1,11 @@
+%h2 All the SpaceCats
+
+%table
+  %tr
+    %th Name
+    %th
+  - @spacecats.each do |cat|
+    %tr= cat.name
+%br
+%br
+%a{:href=>"/new"}New SpaceCat
