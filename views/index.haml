@@ -7,6 +7,8 @@
   - @spacecats.each do |cat|
     %tr
       %td= cat.name
+      %td
+        ="<a href='#{cat.id}'>Show Cat</a>"
 %br
 %br
 %a{:href=>"/new"}New SpaceCat
