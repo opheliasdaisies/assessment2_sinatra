@@ -13,13 +13,17 @@ module Space
       haml :index
     end
 
-    # get "/new" do
-    #   #new
-    # end
+    get "/new" do
+      @spacecat = Spacecat.new
 
-    # post "/index" do
-    #   #create
-    # end
+      erb :new
+    end
+
+    post "/index" do
+      @spacecat = Spacecat.new(params[:spacecat])
+      @spacecat.save
+      redirect_to @spacecat
+    end
 
     # get "/:id/" do
     #   #show
