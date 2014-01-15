@@ -1,15 +1,15 @@
 <form action="/index" method="POST">
   <label for_id="name">Name:</label>
-  <input id="name" type="text" name="name">
+  <input id="name" type="text" name="spacecat[name]" value="<%= @spacecat.name %>">
 
   <label for_id="planet">Home Planet:</label>
-  <input id="planet" type="text" name="home_planet">
+  <input id="planet" type="text" name="spacecat[home_planet]" value="<%= @spacecat.home_planet %>">
 
   <label for_id="tagline">Tagline:</label>
-  <input id="tagline" type="text" name="tagline">
+  <input id="tagline" type="text" name="spacecat[tagline]" value="<%= @spacecat.tagline %>">
 
   <label for_id="superpower">Superpower:</label>
-  <input id="superpower" type="text" name="superpower">
+  <input id="superpower" type="text" name="spacecat[superpower]" value="<% @spacecat.superpower %>">
 
   <input type="submit" value="A New SpaceCat is Born!">
 </form>
